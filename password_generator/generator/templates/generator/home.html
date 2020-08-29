@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<div class="container text-left">
+
+<h1>Password Generator</h1>
+
+<form action="{% url 'password' %}" >
+
+  <select name="length" id="length">
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12" selected="selected">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+  </select>
+  <label for="length">Length</label><br>
+
+  <input type="checkbox" name="uppercase" value="uppercase">
+  <label for="uppercase">Uppercase Letters</label><br>
+
+  <input type="checkbox" name="numbers" value="numbers">
+  <label for="numbers">Numbers</label><br>
+
+  <input type="checkbox" name="special" value="special">
+  <label for="special">Special Characters</label><br>
+
+  <input type="submit" name="Generate"  value="Generate Password" class="btn btn-primary">
+
+</form>
+
+
+<a href="{% url 'about' %}" class="btn btn-secondary">About Author</a>
+
+
+</div>
